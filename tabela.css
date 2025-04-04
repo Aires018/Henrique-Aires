@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+table {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    padding: 15px;
+    border: 2px solid black;
+    text-align: left;
+}
+
+th {
+    background: #2575fc;
+    color: white;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background: #f4f4f4;
+}
+
+tr:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+code {
+    background: black;
+    color: #ffeb3b;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "Courier New", monospace;
+}
+
+footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+.ARNALDO{
+    display: flex;
+    margin-left: 29%;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Títulos Mundiais Red</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1"></script>
+    <style>
+
+        :root {
+            --Red-purple: #003cff; 
+            --Red-black: #1A1A1A;
+            --Red-silver: #C0C0C0; 
+            --Red-white: #FFFFFF; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--Red-black);
+            color: var(--Red-white);
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: var(--Red-purple);
+            border-bottom: 2px solid var(--Red-purple);
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            background-color: var(--Red-silver);
+            border-radius: 5px;
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 1.1em;
+        }
+
+        li:hover {
+            background-color: var(--Red-purple);
+            color: var(--Red-black);
+            cursor: pointer;
+        }
+
+        .flag {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Títulos Mundiais Red</h1>
+    
+    <h2>Títulos Mundiais de Pilotos:</h2>
+    <ul>
+        <li>2010 – Sebastian Vettel</li>
+        <li>2011 – Sebastian Vettel</li>
+        <li>2012 – Sebastian Vettel</li>
+        <li>2013 – Sebastian Vettel</li>
+        <li>2021 – Max Verstappen</li>
+        <li>2022 – Max Verstappen</li>
+        <li>2023 – Max Verstappen</li>
+        <li>2024 – Max Verstappen</li>
+    </ul>
+
+    <h2>Títulos Mundiais de Construtores:</h2>
+    <ul>
+        <li>2010 – Sebastian Vettel & Mark Webber</li>
+        <li>2011 – Sebastian Vettel & Mark Webber</li>
+        <li>2012 – Sebastian Vettel & Mark Webber</li>
+        <li>2013 – Sebastian Vettel & Mark Webber</li>
+        <li>2022 – Max Verstappen & Sergio Pérez/li>
+        <li>2023 – Max Verstappen & Sergio Pérez</li>
+        <script>
+            function estourarFogos() {
+              var duracao = 1 * 1000;
+              var fim = Date.now() + duracao;
+      
+              function frame() {
+                confetti({
+                  particleCount: 5,
+                  spread: 120,
+                  origin: { y: 0.6 }
+                });
+      
+                if (Date.now() < fim) {
+                  requestAnimationFrame(frame);
+                }
+              }
+              frame();
+            }
+      
+            window.onload = estourarFogos;
+        </script>
+    </body>
+    </html>

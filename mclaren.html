@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Títulos Mundiais McLaren</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1"></script>
+    <style>
+
+        :root {
+            --mclaren-orange: #FF4F00; 
+            --mclaren-black: #1A1A1A;
+            --mclaren-silver: #C0C0C0; 
+            --mclaren-white: #FFFFFF; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--mclaren-black);
+            color: var(--mclaren-white);
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: var(--mclaren-orange);
+            border-bottom: 2px solid var(--mclaren-orange);
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            background-color: var(--mclaren-silver);
+            border-radius: 5px;
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 1.1em;
+        }
+
+        li:hover {
+            background-color: var(--mclaren-orange);
+            color: var(--mclaren-black);
+            cursor: pointer;
+        }
+
+        .flag {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Títulos Mundiais McLaren</h1>
+    
+    <h2>Títulos Mundiais de Pilotos:</h2>
+    <ul>
+        <li>1974 – Emerson Fittipaldi 🇧🇷</li>
+        <li>1976 – James Hunt 🇬🇧</li>
+        <li>1984 – Niki Lauda 🇦🇹</li>
+        <li>1985 – Alain Prost 🇫🇷</li>
+        <li>1986 – Alain Prost 🇫🇷</li>
+        <li>1988 – Ayrton Senna 🇧🇷</li>
+        <li>1989 – Alain Prost 🇫🇷</li>
+        <li>1990 – Ayrton Senna 🇧🇷</li>
+        <li>1991 – Ayrton Senna 🇧🇷</li>
+        <li>1998 – Mika Häkkinen 🇫🇮</li>
+        <li>1999 – Mika Häkkinen 🇫🇮</li>
+        <li>2008 – Lewis Hamilton 🇬🇧</li>
+    </ul>
+
+    <h2>Títulos Mundiais de Construtores:</h2>
+    <ul>
+        <li>1974 – Emerson Fittipaldi, Denny Hulme, Mike Hailwood, David Hobbs, Jochen Mass</li>
+        <li>1984 – Niki Lauda, Alain Prost</li>
+        <li>1985 – Alain Prost, Niki Lauda, John Watson</li>
+        <li>1988 – Ayrton Senna, Alain Prost</li>
+        <li>1989 – Alain Prost, Ayrton Senna</li>
+        <li>1990 – Ayrton Senna, Gerhard Berger</li>
+        <li>1991 – Ayrton Senna, Gerhard Berger</li>
+        <li>1998 – Mika Häkkinen, David Coulthard</li>
+    </ul>
+
+    <script>
+        function estourarFogos() {
+          var duracao = 1 * 1000;
+          var fim = Date.now() + duracao;
+  
+          function frame() {
+            confetti({
+              particleCount: 5,
+              spread: 120,
+              origin: { y: 0.6 }
+            });
+  
+            if (Date.now() < fim) {
+              requestAnimationFrame(frame);
+            }
+          }
+          frame();
+        }
+  
+        window.onload = estourarFogos;
+    </script>
+</body>
+</html>
